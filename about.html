@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo-button">
+            <img src="images/RM_Logo_Libre_128.png" width="150px">
+        </a> 
+        <nav>
+            <a href="index.html" class="nav-button">HOME</a>&nbsp;&nbsp;
+            <a href="projects.html" class="nav-button">WORK</a>&nbsp;&nbsp;
+            <a href="about.html" class="active">ABOUT</a>&nbsp;&nbsp;
+            <a href="mailto: mittalromir@gmail.com" class="lower" class="nav-button">LINK</a>
+        </nav>
+    </header>
+
+    <div class="about-hero">
+        <img class="headshot" src="images/Romir_Art.png" alt="Romir-Face" width="300px">
+        <div class="about-main-text">
+            <h1 class="about-name">Romir</h1>
+            <h2>/row-meer/</h2>
+            <h3>Creative. Curious. Capable.</h3>
+        </div>
+    </div>
+    <div class="faq-container">
+        <h2>FAQs</h2>
+        <div class="faq-item">
+            <div class="faq-item-header">
+                <h3 class="question">Educational Background</h3>
+                <div class="question-arrow">&#x25B8;</div>
+            </div>
+            <div class="answer">I am a third year at the University of Minnesota pursuing a BS in Management Information Systems. Additionally, I have minors in Computer Science, UI/UX Design, and Entreprenurial Management.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-item-header">
+                <h3 class="question">Professional Background</h3>
+                <div class="question-arrow">&#x25B8;</div>
+            </div>
+            <div class="answer">I am an Aspiring Product Manager who has a passion for building and delivering products that users love. As someone who is user-centric, data-driven, and technologically-inspired, I am excited to solve complex probles in order to improve lives.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-item-header">
+                <h3 class="question">Personal Background</h3>
+                <div class="question-arrow">&#x25B8;</div>
+            </div>
+            <div class="answer">Some of my creative outlets include: Music, Writing, Cooking, Film, and more!</div>
+        </div>
+    </div>
+    <script>
+        const headers = document.querySelectorAll('.faq-item-header');
+
+        headers.forEach((header) => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                const answer = item.querySelector('.answer');
+                const arrow = header.querySelector('.question-arrow');
+
+                if (item.classList.contains('open')) {
+                    item.classList.remove('open');
+                    arrow.innerHTML = '&#x25B8;'; // Right-pointing triangle arrow
+                } else {
+                    item.classList.add('open');
+                    arrow.innerHTML = '&#x25BE;'; // Down-pointing triangle arrow
+                }
+            });
+        });
+    </script>
+    <div class="contact-form">
+        <form>
+            <h3>Let's Talk!</h3>
+            <div class="input-group">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name" required>
+            </div>
+            <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="janedoe@email.com" required>
+            </div>
+            <div class="input-group">
+                <textarea name="message" id="message" rows="4" placeholder="... " style:></textarea>
+            </div>
+            <div class="form-button">
+                <button type="submit">SEND</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <div>
+            <div class="footer-left">
+               <h5> © 2023 RM. All Rights Reserved. </h5> 
+            </div>
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/romirmittal/" target=”_blank” class="icon">
+                    <img src="images/linkedin-icon.svg" alt="linkedin-icon" width="30px">
+                </a>
+                <a href="https://www.instagram.com/romirrmittal/" target=”_blank” class="icon">
+                    <img src="images/instagram-icon.svg" alt="instagram-icon" width="30px">
+                </a>
+                <a href="https://open.spotify.com/user/romir.mittal" target=”_blank” class="icon">
+                    <img src="images/spotify-icon.svg" alt="spotify-icon" width="30px">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
